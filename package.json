@@ -24,6 +24,7 @@
     "rollup-plugin-polyfill-node": "^0.13.0"
   },
   "dependencies": {
+    "@bytecodealliance/preview2-shim": "^0.15.1",
     "is-odd": "^3.0.1"
   }
 }
