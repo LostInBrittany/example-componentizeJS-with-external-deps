@@ -1,0 +1,26 @@
+{
+  "name": "example-componentizejs-with-external-deps",
+  "version": "1.0.0",
+  "description": "An example of using RollupJS to package external JS libs before using ComponentizeJS to generate a wasm component",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:rollup": "rollup -c",
+    "build": "npm run build:rollup && jco componentize -w wit -n hello -o dist/hello-world.wasm bundle/hello-world.bundled.js"
+  },
+  "keywords": [
+    "wasm",
+    "componentizeJS",
+    "rollupJS"
+  ],
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@bytecodealliance/componentize-js": "^0.7.0",
+    "@bytecodealliance/jco": "^1.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.12.0",
+    "rollup-plugin-polyfill-node": "^0.13.0"
+  }
+}
